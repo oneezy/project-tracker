@@ -1,0 +1,22 @@
+@media (min-width: 769px) {
+
+/*
+==========================================================================
+    TABLET STYLES
+========================================================================== */
+
+.wrapper { width: 90%; }
+
+h1 { font-size: 72px; }
+h2 { font-size: 36px; }
+
+.loadable { position: absolute; bottom: 100%; left: 50%; margin: 0 0 30px -85px; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+.logo-img { width: 170px; }
+.logo { position: static; }
+
+.navigation { margin: 5rem auto 0; }
+
+.feature-wrapper { display: flex; flex-wrap: wrap; }
+.feature-wrapper .feature-widget { flex: 0 0 50%; padding: 2em 0; }
+
+}

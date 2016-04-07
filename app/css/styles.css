@@ -1,0 +1,204 @@
+
+/*
+    RESET
+--------------------------------------- */
+*, *:after, *:before, *:focus { margin: 0; padding: 0; box-sizing: border-box; outline: 0; }
+
+html { font-family: "Roboto"; }
+img { max-width: 100%; }
+a { text-decoration: none; color: #2095f3; }
+
+/*
+    TOUCH DEVICES
+--------------------------------------- */
+@media screen and (min-width: 0) and (max-width: 1024px) {
+    * {
+     outline: none; touch-callout: none; text-size-adjust: none; select: none; highlight: none; tap-highlight-color: rgba(0,0,0,0); overflow-scrolling: touch;
+    -webkit-touch-callout: none; -webkit-text-size-adjust: none; -webkit-user-select: none; -webkit-highlight: none; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-overflow-scrolling: touch;
+    -ms-user-touch-callout: none; -ms-user-text-size-adjust: none; -ms-user-select: none; -ms-user-highlight: none; -ms-user-tap-highlight-color: rgba(0,0,0,0); -ms-user-overflow-scrolling: touch;
+    -moz-user-touch-callout: none; -moz-user-text-size-adjust: none; -moz-user-select: none; -moz-user-highlight: none; -moz-user-tap-highlight-color: rgba(0,0,0,0); -moz-user-overflow-scrolling: touch;
+    -khtml-user-touch-callout: none; -khtml-user-text-size-adjust: none; -khtml-user-select: none; -khtml-user-highlight: none; -khtml-user-tap-highlight-color: rgba(0,0,0,0); -khtml-user-overflow-scrolling: touch;
+    }
+}
+
+/*
+    STYLES
+--------------------------------------- */
+
+/* Material Icons (google sizes) */
+.material-icons { padding: 1rem; }
+
+.material-icons.small { font-size: 18px; }     /* .md-18 */
+.material-icons.medium { font-size: 24px; }    /* .md-24 */
+.material-icons.large { font-size: 36px; }     /* .md-36 */
+.material-icons.xlarge { font-size: 48px; }    /* .md-48 */
+
+/* Material Icons (my sizes) */
+.material-icons.xsmall.fix { font-size: 14px; }
+.material-icons.small.fix { font-size: 29px; }
+.material-icons.medium.fix { font-size: 34px; }
+.material-icons.large.fix { font-size: 44px; }
+.material-icons.xlarge.fix { font-size: 48px; }
+
+/* Shades */
+.material-icons.dark { color: rgba(0, 0, 0, 0.54); }                    /* .md-dark */
+.material-icons.dark.inactive { color: rgba(0, 0, 0, 0.26); }           /* .md-dark.md-inactive */
+.material-icons.light { color: white; }                                 /* .md-light */
+.material-icons.light.inactive { color: rgba(255, 255, 255, 0.3); }     /* .md-light.md-inactive */
+
+.z-depth-0 { box-shadow: none !important; }
+.z-depth-1 { box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+.z-depth-2 { box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+.z-depth-3 { box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+.z-depth-4 { box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21); }
+.z-depth-5 { box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22); }
+
+.hoverable:hover { transition: box-shadow .25s; box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+
+/*
+----------------------------------------------------------------------------------
+    Splash
+---------------------------------------------------------------------------------- */
+.splash { position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background: #d5e3ee; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.splash img { flex: 0; max-width: 150px; margin: -100px 0 0; }
+.splash h1 { flex: 0; color: #000; letter-spacing: 1.5px; text-transform: uppercase; padding: 1rem; font-weight: 300; font-size: 32px; }
+
+
+
+
+/*
+----------------------------------------------------------------------------------
+    Mobile
+---------------------------------------------------------------------------------- */
+@media (min-width: 0) {
+
+.map-wrapper { display: flex; position: fixed; top: 0; right: 0; bottom: 65vh; left: 0; width: 100%; height: 100%; z-index: 777; }
+#map { flex: 1; width: 100vw; height: 35vh; }
+
+.header { position: fixed; top: 35vh; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; z-index: 888; background: rgba(255, 255, 255, .87);
+          box-shadow: 0 12px 15px 15px rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+.header .logo-small { display: none; }
+.header .menu { display: none; }
+
+/*
+    Start Tabs
+--------------------------------------- */
+
+/* Settings */
+.header .tabs .tab-links { display: flex; list-style: none; }
+.header .tabs .tab-links li { flex: 1; text-align: center; }
+.header .tabs .tab-links li a { display: block; position: relative; text-align: center; text-transform: uppercase; font-size: 14px; padding: 2.2rem 0 1.2rem; font-weight: 500; text-decoration: none; color: rgba(0, 0, 0, .27); }
+.header .tabs .tab-links li a:before { content: ""; display: block; position: absolute; left: -50%; top: -2px; width: 100%; height: 4px; background: #ccc; z-index: 0; }
+.header .tabs .tab-links li:first-child a:before { display: none; }
+.header .tabs .tab-links li a:after { content: ""; display: block; position: absolute; left: calc(50% - 25px); top: -25px; width: 50px; height: 50px; border-radius: 100%; background: #ccc; z-index: 1; }
+
+/* DEFAULT */
+.header .tabs .tab-links li.ui-state-default a { color: #d9d9d9; }
+.header .tabs .tab-links li.ui-state-default a:before { background: #d9d9d9; }
+.header .tabs .tab-links li.ui-state-default:last-child a:before { background: #d9d9d9; }
+.header .tabs .tab-links li.ui-state-default a:after { background: #d9d9d9; }
+
+/* ACTIVE */
+.header .tabs .tab-links li.ui-state-active a { color: #c4c4c4; transition: color 0.5s ease; }
+.header .tabs .tab-links li.ui-state-active a:before {  }
+.header .tabs .tab-links li.ui-state-active:last-child a:before {  }
+.header .tabs .tab-links li.ui-state-active a:after { background: #c4c4c4; transition: background-color 0.5s ease; }
+
+/* FINISHED (DEFAULT) */
+.header .tabs .tab-links li.ui-state-default.finished a { color: #4daaf5 !important; }
+.header .tabs .tab-links li.ui-state-default.finished a:before { background: #4daaf5 !important; }
+.header .tabs .tab-links li.ui-state-default.finished a:after { background: #4daaf5 !important; }
+.header .tabs .tab-links:last-child li.ui-state-default.finished a:before { background: #4daaf5 !important; }
+
+/* FINISHED (ACTIVE) */
+.header .tabs .tab-links li.ui-state-active.finished a { color: #2095f3 !important; }
+.header .tabs .tab-links li.ui-state-active.finished a:before { background: #4daaf5 !important; }
+.header .tabs .tab-links li.ui-state-active.finished a:after { background: #2095f3 !important; }
+.header .tabs .tab-links:last-child li.ui-state-active.finished a:before { background: #2095f3 !important; }
+
+/* PROGRESS (DEFAULT) */
+.header .tabs .tab-links li.ui-state-default.progress a { color: #ccc; }
+.header .tabs .tab-links li.ui-state-default.progress a:before { background: #d9d9d9; animation: defaultLine 1.5s infinite linear; }
+.header .tabs .tab-links li.ui-state-default.progress a:after { background: #4daaf5; animation: defaultTab 1.5s infinite linear; }
+.header .tabs .tab-links:last-child li.ui-state-default.progress a:before { background: #ccc; }
+
+/* PROGRESS (ACTIVE) */
+.header .tabs .tab-links li.ui-state-active.progress a { color: #000; }
+.header .tabs .tab-links li.ui-state-active.progress a:before { background: #d9d9d9; animation: activeLine 1.5s infinite linear; }
+.header .tabs .tab-links li.ui-state-active.progress a:after { background: #2095f3; animation: activeTab 1.5s infinite linear; }
+.header .tabs .tab-links:last-child li.ui-state-active.progress a:before { background: #2095f3; }
+
+
+
+/* TAB CONTENTS */
+.header .tabs .tab-content { padding: 0 1rem 1rem .5rem; }
+.header .tabs .tab-content ul { list-style: none; }
+.header .tabs .tab-content ul li {  }
+.header .tabs .tab-content ul li a { display: flex; align-items: center; align-content: flex-start; }
+.header .tabs .tab-content ul li a * { display: inline-block; line-height: 1.2 !important; padding: 0 !important; margin: 0 0 0 1rem; }
+
+/* CHECKBOX STATES */
+.header .tabs .tab-content ul li.todo * { color: #c4c4c4; cursor: default; }
+.header .tabs .tab-content ul li.doing * { color: #000; cursor: pointer; }
+.header .tabs .tab-content ul li.done * { color: #2095f3; cursor: pointer; }
+.header .tabs .tab-content ul li.help * { cursor: help !important; }
+.header .tabs .tab-content ul li.default * { cursor: default !important; }
+
+}
+
+
+/*
+    Tablet
+---------------------------------------------------------------------------------- */
+@media (min-width: 769px) {
+
+/* Navigation */
+.header { position: fixed; top: 0; left: 0; width: 350px; height: 100vh; z-index: 999; background: rgba(244, 244, 244, .74); box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21); }
+.header .logo-small { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem 0 4rem; background: rgba(77,170,245, .32); }
+.header .logo-small h2 { flex: 0; color: #000; letter-spacing: 1.5px; text-transform: uppercase; padding: 1rem; font-weight: 300; font-size: 24px; }
+
+
+/* Map */
+.map-wrapper { position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 888; }
+#map { width: 100%; height: 100%; }
+
+}
+
+/*
+    Desktop
+---------------------------------------------------------------------------------- */
+@media (min-width: 1025px) {
+
+
+
+}
+
+
+
+/*
+    Animations
+---------------------------------------------------------------------------------- */
+@keyframes defaultTab {
+    0% { background: #d9d9d9; }
+    50% { background: #4daaf5; }
+    100% { background: #d9d9d9; }
+}
+
+@keyframes activeTab {
+    0% { background: #d9d9d9; }
+    50% { background: #2095f3; }
+    100% { background: #d9d9d9; }
+}
+
+@keyframes defaultLine {
+    0% { background: #d9d9d9; }
+    50% { background: #4daaf5; }
+    100% { background: #d9d9d9; }
+}
+
+@keyframes activeLine {
+    0% { background: #d9d9d9; }
+    50% { background: #2095f3; }
+    100% { background: #d9d9d9; }
+}

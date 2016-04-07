@@ -1,0 +1,16 @@
+@media (min-width: 1025px) {
+
+/*
+==========================================================================
+ DESKTOP STYLESHEET
+========================================================================== */
+
+.wrapper { width: 80%; }
+
+.loadable { position: absolute; bottom: 100%; left: 50%; margin: 0 0 50px -100px; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+.logo-img { width: 200px; }
+
+.feature-wrapper { display: flex; flex-wrap: wrap; }
+.feature-wrapper .feature-widget { flex: 0 0 25%; padding: 2em 0; }
+
+}
